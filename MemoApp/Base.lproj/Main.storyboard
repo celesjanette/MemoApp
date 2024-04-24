@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rbF-Kl-hzy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rbF-Kl-hzy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -199,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="1287.7862595419847" y="571.83098591549299"/>
         </scene>
-        <!--Settings-->
+        <!--SettingsViewController-->
         <scene sceneID="eKB-Uo-dPw">
             <objects>
-                <viewController title="Settings" id="z4e-5n-FEd" sceneMemberID="viewController">
+                <viewController title="SettingsViewController" id="z4e-5n-FEd" customClass="SettingsViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cML-M8-jzH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,8 +219,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0v-jb-wr2">
-                                                <rect key="frame" x="0.0" y="28.333333333333314" width="320" height="216"/>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jT3-FV-9N8">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="216"/>
                                             </pickerView>
                                         </subviews>
                                     </stackView>
@@ -235,6 +235,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsA-aL-Tnr">
                                                 <rect key="frame" x="311.33333333333337" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="swAscending:" destination="gCi-ig-DZe" eventType="valueChanged" id="Suo-2f-pDg"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -249,8 +252,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="jAy-HL-GSQ"/>
+                    <connections>
+                        <outlet property="pckSortField" destination="jT3-FV-9N8" id="GeK-ES-SjX"/>
+                        <outlet property="swAscending" destination="ZsA-aL-Tnr" id="Dmd-um-Iga"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbr-lA-rR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gCi-ig-DZe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-996" y="1307"/>
         </scene>
