@@ -18,7 +18,9 @@
 		42703C772BC81DAD0073CDF4 /* MemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42703C762BC81DAD0073CDF4 /* MemoAppUITestsLaunchTests.swift */; };
 		42718D4F2BD7ED5300ACBD5E /* MemoCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42718D4E2BD7ED5300ACBD5E /* MemoCreate.swift */; };
 		42718D512BD8642E00ACBD5E /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42718D502BD8642E00ACBD5E /* DateViewController.swift */; };
-		42A2F08D2BCEA190004090B5 /* MemoCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42A2F08B2BCEA190004090B5 /* MemoCoreData.xcdatamodeld */; };
+		AABBACA92BD8908C00019E57 /* MemoCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AABBACA72BD8908C00019E57 /* MemoCoreData.xcdatamodeld */; };
+		AABBACAB2BD8AEDB00019E57 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBACAA2BD8AEDB00019E57 /* SettingsViewController.swift */; };
+		AABBACAD2BD8D8B100019E57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBACAC2BD8D8B100019E57 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,9 @@
 		42703C762BC81DAD0073CDF4 /* MemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		42718D4E2BD7ED5300ACBD5E /* MemoCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCreate.swift; sourceTree = "<group>"; };
 		42718D502BD8642E00ACBD5E /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
-		42A2F08C2BCEA190004090B5 /* MemoCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MemoCoreData.xcdatamodel; sourceTree = "<group>"; };
+		AABBACA82BD8908C00019E57 /* MemoCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MemoCoreData.xcdatamodel; sourceTree = "<group>"; };
+		AABBACAA2BD8AEDB00019E57 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AABBACAC2BD8D8B100019E57 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +114,13 @@
 				42703C572BC81DA60073CDF4 /* ViewController.swift */,
 				42718D4E2BD7ED5300ACBD5E /* MemoCreate.swift */,
 				42703C592BC81DA60073CDF4 /* Main.storyboard */,
+				AABBACAA2BD8AEDB00019E57 /* SettingsViewController.swift */,
+				AABBACAC2BD8D8B100019E57 /* Constants.swift */,
 				42703C5C2BC81DAC0073CDF4 /* Assets.xcassets */,
 				42703C5E2BC81DAC0073CDF4 /* LaunchScreen.storyboard */,
 				42703C612BC81DAC0073CDF4 /* Info.plist */,
-				42A2F08B2BCEA190004090B5 /* MemoCoreData.xcdatamodeld */,
 				42718D502BD8642E00ACBD5E /* DateViewController.swift */,
+				AABBACA72BD8908C00019E57 /* MemoCoreData.xcdatamodeld */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -267,12 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABBACA92BD8908C00019E57 /* MemoCoreData.xcdatamodeld in Sources */,
 				42718D4F2BD7ED5300ACBD5E /* MemoCreate.swift in Sources */,
+				AABBACAB2BD8AEDB00019E57 /* SettingsViewController.swift in Sources */,
 				42703C582BC81DA60073CDF4 /* ViewController.swift in Sources */,
 				42703C542BC81DA60073CDF4 /* AppDelegate.swift in Sources */,
-				42A2F08D2BCEA190004090B5 /* MemoCoreData.xcdatamodeld in Sources */,
 				42718D512BD8642E00ACBD5E /* DateViewController.swift in Sources */,
 				42703C562BC81DA60073CDF4 /* SceneDelegate.swift in Sources */,
+				AABBACAD2BD8D8B100019E57 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,14 +629,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		42A2F08B2BCEA190004090B5 /* MemoCoreData.xcdatamodeld */ = {
+		AABBACA72BD8908C00019E57 /* MemoCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				42A2F08C2BCEA190004090B5 /* MemoCoreData.xcdatamodel */,
+				AABBACA82BD8908C00019E57 /* MemoCoreData.xcdatamodel */,
 			);
-			currentVersion = 42A2F08C2BCEA190004090B5 /* MemoCoreData.xcdatamodel */;
-			name = MemoCoreData.xcdatamodeld;
-			path = /Users/caugustus/XCodeProjects/MemoApp/MemoApp/MemoCoreData.xcdatamodeld;
+			currentVersion = AABBACA82BD8908C00019E57 /* MemoCoreData.xcdatamodel */;
+			path = MemoCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
