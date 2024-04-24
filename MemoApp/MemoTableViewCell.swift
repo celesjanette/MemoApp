@@ -9,6 +9,9 @@ import UIKit
 
 class MemoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgCriticality: UIImageView!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblSubject: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

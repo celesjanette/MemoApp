@@ -22,6 +22,27 @@ class MemoCreate: UIViewController, UITextFieldDelegate, DateControllerDelegate,
     var currentMemo: Memo?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if currentMemo != nil {
+                    subjectField.text = currentMemo!.subject
+                    memoField.text = currentMemo!.memoArea
+                    if let criticality = currentMemo?.criticality{
+                        switch(criticality){
+                        case 0:
+                            criticalControl.selectedSegmentIndex = 0
+                        case 1:
+                            criticalControl.selectedSegmentIndex = 1
+                        case 2:
+                            criticalControl.selectedSegmentIndex = 2
+                        default:
+                            print("Error retrieving criticality level")
+                        }
+                    }
+                    let formatter = DateFormatter()
+                    formatter.dateStyle = .short
+                    if currentMemo!.date != nil{
+                        dateLabel.text = formatter.string(from: currentMemo!.date!)
+                    }
+                }
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
@@ -96,11 +117,11 @@ class MemoCreate: UIViewController, UITextFieldDelegate, DateControllerDelegate,
                     
                     switch criticalControl.selectedSegmentIndex {
                     case 0:
-                        existingMemo.criticality = 1
+                        existingMemo.criticality = 0
                     case 1:
-                        existingMemo.criticality = 2
+                        existingMemo.criticality = 1
                     case 2:
-                        existingMemo.criticality = 3
+                        existingMemo.criticality = 2
                     default:
                         existingMemo.criticality = 0
                     }
@@ -119,11 +140,11 @@ class MemoCreate: UIViewController, UITextFieldDelegate, DateControllerDelegate,
                     
                     switch criticalControl.selectedSegmentIndex {
                     case 0:
-                        newMemo.criticality = 1
+                        newMemo.criticality = 0
                     case 1:
-                        newMemo.criticality = 2
+                        newMemo.criticality = 1
                     case 2:
-                        newMemo.criticality = 3
+                        newMemo.criticality = 2
                     default:
                         newMemo.criticality = 0
                     }
