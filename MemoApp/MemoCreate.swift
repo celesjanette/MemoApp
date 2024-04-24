@@ -96,13 +96,13 @@ class MemoCreate: UIViewController, UITextFieldDelegate, DateControllerDelegate,
                     
                     switch criticalControl.selectedSegmentIndex {
                     case 0:
-                        existingMemo.criticality = "Low"
+                        existingMemo.criticality = 1
                     case 1:
-                        existingMemo.criticality = "Medium"
+                        existingMemo.criticality = 2
                     case 2:
-                        existingMemo.criticality = "High"
+                        existingMemo.criticality = 3
                     default:
-                        existingMemo.criticality = "Unknown"
+                        existingMemo.criticality = 0
                     }
                 } else {
                     let newMemo = Memo(context: context)
@@ -119,13 +119,13 @@ class MemoCreate: UIViewController, UITextFieldDelegate, DateControllerDelegate,
                     
                     switch criticalControl.selectedSegmentIndex {
                     case 0:
-                        newMemo.criticality = "Low"
+                        newMemo.criticality = 1
                     case 1:
-                        newMemo.criticality = "Medium"
+                        newMemo.criticality = 2
                     case 2:
-                        newMemo.criticality = "High"
+                        newMemo.criticality = 3
                     default:
-                        newMemo.criticality = "Unknown"
+                        newMemo.criticality = 0
                     }
                     
                     currentMemo = newMemo
