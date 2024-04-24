@@ -11,7 +11,11 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     @IBOutlet weak var pckSortField: UIPickerView!
     @IBOutlet weak var swAscending: UISwitch!
-    
+    @IBAction func sortDirectionChanged(_ sender: Any) {
+        let settings = UserDefaults.standard
+        settings.set(swAscending.isOn, forKey: "sortDirectionAscending")
+        settings.synchronize()
+    }
 
     let sortOrderItems: Array<String> = ["subject", "date", "criticality"]
 
@@ -39,12 +43,6 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     override func viewDidDisappear(_ animated: Bool) {
         UIDevice.current.isBatteryMonitoringEnabled = false
-    }
-    
-    @IBAction func sortDirectionChanged(_ sender: Any) {
-        let settings = UserDefaults.standard
-        settings.set(swAscending.isOn, forKey: "sortDirectionAscending")
-        settings.synchronize()
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
